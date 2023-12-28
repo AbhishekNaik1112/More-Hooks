@@ -12,6 +12,12 @@ const TodoTask = ({ item: { data, isHidden }, index, dispatch }) => {  //destruc
       >
         Toggle
       </button>
+      <button
+        className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 mt-2 ml-5 cursor-pointer"
+        onClick={() => dispatch({ type: "DELETE_ITEM", payload: index })}
+      >
+        Delete
+      </button>
     </div>
   );
 };

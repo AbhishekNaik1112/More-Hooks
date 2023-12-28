@@ -24,6 +24,9 @@ const reducer = (state, action) => {
       return i === action.payload ? { ...e, isHidden: !e.isHidden } : e;
     });
   }
+  if (action.type === "DELETE_ITEM") {
+    return state.filter((_, i) => i !== action.payload);
+  }
   return state;
 };
 
